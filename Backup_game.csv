@@ -1,0 +1,21 @@
+Page_no,Choice_No,Goto_page,Text
+1,0,1,Front Door - The entrance to all your dreams 
+1,1,2,Onwards ...  North is the only option
+2,0,2,The Hall -  Options abound
+2,1,3,North 
+2,2,4,East
+2,3,1,South
+2,4,5,West
+3,0,3,The Northern Room 
+3,1,6,A door to the Garden Jungle
+3,2,3,
+3,3,2,Go south 
+4,0,4,The Eastern Room
+4,1,4,
+4,2,4,
+4,3,4,
+4,4,2,Go West
+5,0,5,The Western Room 
+5,1,5,
+5,2,2,Go East
+6,0,9999,A tiger leaps out and eats you !!!
