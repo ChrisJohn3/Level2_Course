@@ -140,7 +140,7 @@ def page_up(pag_no):
 # Updated to include the population of the available option #
 # on page selection.  This then can be used to limit the    #
 # User's route through the game                             #
-
+    global health
     global awr_accept
     global choice_accept
     global choice_text
@@ -150,7 +150,10 @@ def page_up(pag_no):
         if list_to_fill[i]==pag_no:
             awr_accept.append(list_to_fill3[i])
             choice_accept.append(list_to_fill2[i])
-            text_wrapper(list_to_fill4[i].strip('"').strip(),120)
+            text_wrapper(list_to_fill5[i].strip('"').strip(),120)
+            print(health)
+            health = (health) + int(list_to_fill4[i])
+            print(health)
             # print(list_to_fill4[i].strip('"'))
             print()
             
@@ -208,10 +211,16 @@ def find_nth(start_str,str_to_find,nth):
 # Next we need to get our game data and hold it in the      #
 # memory so we can interrogate it for the game.             #
 
+import random
+global health
+health = int(random.random() * 25) + 75
+# health = 100
+
 list_to_fill=[]
 list_to_fill2=[]
 list_to_fill3=[]
 list_to_fill4=[]
+list_to_fill5=[]
 global awr_accept 
 awr_accept=['9999']
 global choice_accept
@@ -219,7 +228,7 @@ choice_accept=[]
 
 choice_convert=['Spin','North','East','South','West']
 
-file1 = open("E:/aaaa Level 2 Certificate Python etc/highway_holocaust3 reduced.csv", 'r')
+file1 = open("highway_holocaust4.csv", 'r')
 # file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
 Lines = file1.readline()
 cols_to_import=Lines.count(',')+1
@@ -275,7 +284,8 @@ for i in file1:
     list_to_fill.insert(j,int(i[0:find_nth(i,',',1)]))
     list_to_fill2.insert(j,i[find_nth(i,',',1)+1:find_nth(i,',',2)])
     list_to_fill3.insert(j,i[find_nth(i,',',2)+1:find_nth(i,',',3)])
-    list_to_fill4.insert(j,i[find_nth(i,',',3)+1:len(i)])
+    list_to_fill4.insert(j,i[find_nth(i,',',3)+1:find_nth(i,',',4)])
+    list_to_fill5.insert(j,i[find_nth(i,',',4)+1:len(i)])
 
     j+=1
     
@@ -298,7 +308,7 @@ sel_page=1
 # achievable value to be able to exit - otherwise we have   #
 # an infinate loop - I chose 9999                           #
 
-while sel_page != 9999:
+while sel_page != 9999 and health > 0:
     page_up(sel_page)
     sleep(1)
     sel_page=usr_page_sel()
@@ -343,3 +353,4 @@ clear()
 #
 # Overall we can then make the main while loop also consider that the Health value must be above x otherwise goto GAME OVER 
 # screen and then pause and go back to game start again 
+
