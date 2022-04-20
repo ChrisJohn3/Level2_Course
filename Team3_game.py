@@ -219,33 +219,34 @@ choice_accept=[]
 
 choice_convert=['Spin','North','East','South','West']
 
-file1 = open("E:/aaaa Level 2 Certificate Python etc/highway_holocaust3.csv", 'r')
+file1 = open("E:/aaaa Level 2 Certificate Python etc/highway_holocaust3 reduced.csv", 'r')
 # file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
 Lines = file1.readline()
 cols_to_import=Lines.count(',')+1
 j=1
 
 
-# print(r" ________         ____           __       ")
-# sleep(0.25)
-# print(r"/_  __/ /  ___   / __/_ _  ___  / /___ __ ")
-# sleep(0.25)
-# print(r" / / / _ \/ -_) / _//  ' \/ _ \/ __/ // / ")
-# sleep(0.25)
-# print(r"/_/ /_//_/\__/ /___/_/_/_/ .__/\__/\_, /  ")
-# sleep(0.25)
-# print(r"                        /_/       /___/   ")
-# sleep(0.25)
+print(r" ________         ____           __       ")
+sleep(0.25)
+print(r"/_  __/ /  ___   / __/_ _  ___  / /___ __ ")
+sleep(0.25)
+print(r" / / / _ \/ -_) / _//  ' \/ _ \/ __/ // / ")
+sleep(0.25)
+print(r"/_/ /_//_/\__/ /___/_/_/_/ .__/\__/\_, /  ")
+sleep(0.25)
+print(r"                        /_/       /___/   ")
+sleep(0.25)
 
-# print(r"   ___                      __          ")
-# sleep(0.25)
-# print(r"  / _ )__ _____  ___ ____ _/ /__ _    __")
-# sleep(0.25)
-# print(r" / _  / // / _ \/ _ `/ _ `/ / _ \ |/|/ /")
-# sleep(0.25)
-# print(r"/____/\_,_/_//_/\_, /\_,_/_/\___/__,__/ ")
-# sleep(0.25)
-# print(r"               /___/                    ")
+print(r"   ___                      __          ")
+sleep(0.25)
+print(r"  / _ )__ _____  ___ ____ _/ /__ _    __")
+sleep(0.25)
+print(r" / _  / // / _ \/ _ `/ _ `/ / _ \ |/|/ /")
+sleep(0.25)
+print(r"/____/\_,_/_//_/\_, /\_,_/_/\___/__,__/ ")
+sleep(0.25)
+print(r"               /___/                    ")
+sleep(2)
 
 
 for i in file1:
@@ -309,6 +310,36 @@ while sel_page != 9999:
 # Just say goodbye to our customers and then leaving the    #
 # terminal clear to show we are out of the way :)           #
 clear()
+
+print(r" o-o    O  o   o o--o      o-o  o   o o--o o--o  ")
+sleep(0.25)
+print(r"o      / \ |\ /| |        o   o |   | |    |   | ")
+sleep(0.25)
+print(r"|  -o o---o| O | O-o      |   | o   o O-o  O-Oo  ")
+sleep(0.25)
+print(r"o   | |   ||   | |        o   o  \ /  |    |  \  ")
+sleep(0.25)
+print(r" o-o  o   oo   o o--o      o-o    o   o--o o   o ")
+
+sleep(0.25)
+print()
 print("Thanks for playing our game, we're sure you died horribly but at least here you can do it again.  Don't do this in real life it's a one time deal!!!")
-sleep(3)
+sleep(3.5)
 clear()
+
+
+# Thinking around the Health Value to be carried / effected through the game
+
+# First we will need to create a variable that will hold the heath value.  
+# What range will the health cover - straight % or out of 200? 
+# We need to show the health value on each screen
+#
+# We can then create a random value - with a minimum and maximum to populate into this variable at the start of each game
+# To have each room potentially effect the Health value the effect will have to be included in the file with the room data 
+# Because of the structure of the data file this will be included prior to the room/option Text and will need an extra list 
+# in the program for the data to be loaded into.  
+# 
+# Then as a part of the screen display function we can add on or take away however many points are related to that room
+#
+# Overall we can then make the main while loop also consider that the Health value must be above x otherwise goto GAME OVER 
+# screen and then pause and go back to game start again 
