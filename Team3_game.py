@@ -152,14 +152,16 @@ def page_up(pag_no):
     global choice_text
     choice_accept=[]
     awr_accept=['9999']
+    print("Your health Value coming in to this room was " + str(health))
+    
     for i in range(len(list_to_fill)):
         if list_to_fill[i]==pag_no:
             awr_accept.append(list_to_fill3[i])
             choice_accept.append(list_to_fill2[i])
             text_wrapper(list_to_fill5[i].strip('"').strip(),120)
-            print("Your health Value coming in to this room was " + str(health))
+            # print("Your health Value coming in to this room was " + str(health))
             health = (health) + int(list_to_fill4[i])
-            print("Your health Value is now "+ str(health))
+            # print("Your health Value is now "+ str(health))
             # print(list_to_fill4[i].strip('"'))
             print()
             
@@ -168,7 +170,7 @@ def page_up(pag_no):
     choice_text="Available options are:"
     for i in range(len(choice_accept)):
         choice_text=choice_text + " "+choice_convert[i]
-
+    print("Your health Value is now "+ str(health))
     print(choice_text)
     print()
 
@@ -235,35 +237,56 @@ choice_accept=[]
 
 choice_convert=['Spin','North','East','South','West']
 
-file1 = open("highway_holocaust4.csv", 'r')
+file1 = open("highway_holocaust4 reduced.csv", 'r')
 # file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
 Lines = file1.readline()
 cols_to_import=Lines.count(',')+1
 j=1
 
 
-print(r" ________         ____           __       ")
-sleep(0.25)
-print(r"/_  __/ /  ___   / __/_ _  ___  / /___ __ ")
-sleep(0.25)
-print(r" / / / _ \/ -_) / _//  ' \/ _ \/ __/ // / ")
-sleep(0.25)
-print(r"/_/ /_//_/\__/ /___/_/_/_/ .__/\__/\_, /  ")
-sleep(0.25)
-print(r"                        /_/       /___/   ")
-sleep(0.25)
+print("""
+                |     :::       :::       ::::::::::       :::        ::::::::       ::::::::         :::   :::       :::::::::: |
+                |    :+:       :+:       :+:              :+:       :+:    :+:     :+:    :+:       :+:+: :+:+:      :+:         |
+                |   +:+       +:+       +:+              +:+       +:+            +:+    +:+      +:+ +:+:+ +:+     +:+          |
+                |  +#+  +:+  +#+       +#++:++#         +#+       +#+            +#+    +:+      +#+  +:+  +#+     +#++:++#      |
+                | +#+ +#+#+ +#+       +#+              +#+       +#+            +#+    +#+      +#+       +#+     +#+            |
+                | #+#+# #+#+#        #+#              #+#       #+#    #+#     #+#    #+#      #+#       #+#     #+#             |
+                | ###   ###         ##########       ########## ########       ########       ###       ###     ##########       |
+                ﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀
+                        | '||''|.'||''|.  '||''''|  .|'''.|  .|'''.|   '   .|'''.||''||''|  |    '||''|.|''||''| |
+                        |  ||   ||||   ||  ||  .    ||..  '  ||..  '       ||..  '   ||    |||    ||   ||  ||    |
+                        |  ||...|'||''|'   ||''|     ''|||.   ''|||.        ''|||.   ||   |  ||   ||''|'   ||    |
+                        |  ||     ||   |.  ||      .     '||.     '||     .     '||  ||  .''''|.  ||   |.  ||    |
+                        | .||.   .||.  '|'.||.....||'....|' |'....|'      |'....|'  .||..|.  .||..||.  '|'.||.   |
+                        __________________________________________________________________________________________
+                                    [░ ░T░H░I░S░ ░I░S░ ░A░ ░T░E░A░M░ ░(░3░)░ ░P░R░O░D░U░C░T░I░O░N░ ░]░
+                                                    _______________________________
 
-print(r"   ___                      __          ")
-sleep(0.25)
-print(r"  / _ )__ _____  ___ ____ _/ /__ _    __")
-sleep(0.25)
-print(r" / _  / // / _ \/ _ `/ _ `/ / _ \ |/|/ /")
-sleep(0.25)
-print(r"/____/\_,_/_//_/\_, /\_,_/_/\___/__,__/ ")
-sleep(0.25)
-print(r"               /___/                    ")
-sleep(2)
+                                                          𝓟𝓡𝓔𝓢𝓢 Enter 𝓣𝓞 𝓑𝓔𝓖𝓘𝓝
+                                                    _______________________________
+""")
+input()
+# print(r" ________         ____           __       ")
+# sleep( 0.15)
+# print(r"/_  __/ /  ___   / __/_ _  ___  / /___ __ ")
+# sleep( 0.15)
+# print(r" / / / _ \/ -_) / _//  ' \/ _ \/ __/ // / ")
+# sleep( 0.15)
+# print(r"/_/ /_//_/\__/ /___/_/_/_/ .__/\__/\_, /  ")
+# sleep( 0.15)
+# print(r"                        /_/       /___/   ")
+# sleep( 0.15)
 
+# print(r"   ___                      __          ")
+# sleep( 0.15)
+# print(r"  / _ )__ _____  ___ ____ _/ /__ _    __")
+# sleep( 0.15)
+# print(r" / _  / // / _ \/ _ `/ _ `/ / _ \ |/|/ /")
+# sleep( 0.15)
+# print(r"/____/\_,_/_//_/\_, /\_,_/_/\___/__,__/ ")
+# sleep( 0.15)
+# print(r"               /___/                    ")
+# sleep(2)
 
 for i in file1:
 # Each line will be interpreted for the four pieces of data # 
@@ -328,17 +351,84 @@ while sel_page != 9999 and health > 0:
 # terminal clear to show we are out of the way :)           #
 clear()
 
+
+
+
 print(r" o-o    O  o   o o--o      o-o  o   o o--o o--o  ")
-sleep(0.25)
+sleep( 0.15)
 print(r"o      / \ |\ /| |        o   o |   | |    |   | ")
-sleep(0.25)
+sleep( 0.15)
 print(r"|  -o o---o| O | O-o      |   | o   o O-o  O-Oo  ")
-sleep(0.25)
+sleep( 0.15)
 print(r"o   | |   ||   | |        o   o  \ /  |    |  \  ")
-sleep(0.25)
+sleep( 0.15)
 print(r" o-o  o   oo   o o--o      o-o    o   o--o o   o ")
 
-sleep(0.25)
+sleep( 0.15)
+
+print(r'           ...')
+sleep(0.15)
+print(r'          ;::::;')
+sleep( 0.15)
+print(r'         ;::::; :;')
+sleep( 0.15)
+print(r"        ;:::::'   :;                )")
+sleep( 0.15)
+print(r'        ;:::::;     ;.               (')
+sleep( 0.15)
+print(r"        ,:::::'      ;   _ ___________ ) ")
+sleep( 0.15)
+print(r'        ::::::;       ; [_[___________# ')
+sleep( 0.15)
+print(r'        ;:::::;       ;          OOOOOOOO')
+sleep( 0.15)
+print(r"        ,;::::::;     ;'          / OOOOOOO")
+sleep( 0.15)
+print(r'       ;:::::::::`. ,,,;.        /  / DOOOOOO')
+sleep( 0.15)
+print(r"     .';:::::::::::::::::;,     /  /     DOOOO")
+sleep( 0.15)
+print(r'    ,::::::;::::::;;;;::::;,   /  /        DOOO')
+sleep( 0.15)
+print(r"    ;`::::::`'::::::;;;::::: ,#/  /          DOOO")
+sleep( 0.15)
+print(r'    :`:::::::`;::::::;;::: ;::#  /            DOOO')
+sleep( 0.15)
+print(r'    ::`:::::::`;:::::::: ;::::# /              DOO')
+sleep( 0.15)
+print(r'    `:`:::::::`;:::::: ;::::::#/               DOO')
+sleep( 0.15)
+print(r'    :::`:::::::`;; ;:::::::::##                OO')
+sleep( 0.15)
+print(r'    ::::`:::::::`;::::::::;:::#                OO')
+sleep( 0.15)
+print(r"    `:::::`::::::::::::;'`:;::#                O")
+sleep( 0.15)
+print(r"    `:::::`::::::::;' /  / `:#")
+sleep( 0.15)
+print(r"     ::::::`:::::;'  /  /   `#")
+sleep( 0.15)
+print(r'')
+sleep( 0.15)
+print(r'             88                               88  ')
+sleep( 0.15)
+print(r'             88                         ,d    88  ')
+sleep( 0.15)
+print(r'             88                         88    88  ')
+sleep( 0.15)
+print(r'     ,adPPYb,88  ,adPPYba, ,adPPYYba, MM88MMM 88,dPPYba,   ')
+sleep( 0.15)
+print(r'    a8"    `Y88 a8P_____88 '+'"" '+"   `Y8   88   88P'  "+'   "8a ')
+sleep( 0.15)
+print(r'   8b       88 8PP""""""" ,adPPPPP88   88    88       88')
+sleep( 0.15)
+print(r'   "8a,   ,d88 "8b,   ,aa 88,    ,88   88,   88       88')
+sleep( 0.15) 
+print(r"    `"+'"8bbdP"Y8  `"Ybbd8"'+"' `"+'"8bbdP"Y8   "Y888 88       88 ')
+sleep( 0.15)
+print(r'')
+
+
 print()
 print("Thanks for playing our game, we're sure you died horribly but at least here you can do it again.  Don't do this in real life it's a one time deal!!!")
 sleep(3.5)
@@ -360,3 +450,37 @@ clear()
 #
 # Overall we can then make the main while loop also consider that the Health value must be above x otherwise goto GAME OVER 
 # screen and then pause and go back to game start again 
+
+
+
+
+    #         ...
+    #       ;::::;
+    #      ;::::; :;
+    #      ;:::::'   :;                )
+    #     ;:::::;     ;.               (
+    #     ,:::::'       ;  _ ___________ ) 
+    #     ::::::;       ; [_[___________# 
+    #     ;:::::;       ;         OOOOOOOO
+    #     ,;::::::;     ;'         / OOOOOOO
+    #     ;:::::::::`. ,,,;.        /  / DOOOOOO
+    # .';:::::::::::::::::;,     /  /     DOOOO
+    # ,::::::;::::::;;;;::::;,   /  /        DOOO
+    # ;`::::::`'::::::;;;::::: ,#/  /          DOOO
+    # :`:::::::`;::::::;;::: ;::#  /            DOOO
+    # ::`:::::::`;:::::::: ;::::# /              DOO
+    # `:`:::::::`;:::::: ;::::::#/               DOO
+    # :::`:::::::`;; ;:::::::::##                OO
+    # ::::`:::::::`;::::::::;:::#                OO
+    # `:::::`::::::::::::;'`:;::#                O
+    # `:::::`::::::::;' /  / `:#
+    # ::::::`:::::;'  /  /   `#
+
+    #         88                               88           
+    #         88                         ,d    88           
+    #         88                         88    88           
+    # ,adPPYb,88  ,adPPYba, ,adPPYYba, MM88MMM 88,dPPYba,   
+    # a8"    `Y88 a8P_____88 ""     `Y8   88    88P'    "8a  
+    # 8b       88 8PP""""""" ,adPPPPP88   88    88       88  
+    # "8a,   ,d88 "8b,   ,aa 88,    ,88   88,   88       88  
+    # `"8bbdP"Y8  `"Ybbd8"' `"8bbdP"Y8   "Y888 88       88 
