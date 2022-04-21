@@ -1,6 +1,12 @@
 ##########################################################################################
 # Team 3 Game for the Code Nation Develop - Coding course, starting on Monday 11th April #
 # -------------------------------------------------------------------------------------- #
+#                                                                                        #
+#  2020-04-20 Code and data file updated to carry Health value and its effects.          #
+#               Health value also displayed on every screen and effect shown.            #
+#               Initial health value randomised between 75% and 100%                     #
+#                                                                         Carl Skafie    #
+#                                                                                        #
 #  2020-04-19 Code and data file updated to have directions rather than page numbers.    #
 #               Text wrapping function developed.                                        #
 #                                                                         Chris Johnson  #
@@ -151,9 +157,9 @@ def page_up(pag_no):
             awr_accept.append(list_to_fill3[i])
             choice_accept.append(list_to_fill2[i])
             text_wrapper(list_to_fill5[i].strip('"').strip(),120)
-            print(health)
+            print("Your health Value coming in to this room was " + str(health))
             health = (health) + int(list_to_fill4[i])
-            print(health)
+            print("Your health Value is now "+ str(health))
             # print(list_to_fill4[i].strip('"'))
             print()
             
@@ -211,6 +217,7 @@ def find_nth(start_str,str_to_find,nth):
 # Next we need to get our game data and hold it in the      #
 # memory so we can interrogate it for the game.             #
 
+# Create the initalised health value in a variable , value to be between 75 and 100
 import random
 global health
 health = int(random.random() * 25) + 75
@@ -353,4 +360,3 @@ clear()
 #
 # Overall we can then make the main while loop also consider that the Health value must be above x otherwise goto GAME OVER 
 # screen and then pause and go back to game start again 
-
