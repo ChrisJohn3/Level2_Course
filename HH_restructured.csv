@@ -1,7 +1,7 @@
 Page_no,Choice_No,Goto_page,Health Effect,Text
 1,0,1,0,After a week of careful preparation the colony is ready to begin the long trek to Big Spring. 3 vehicles make up the convoy: A school bus. A roadster and a gasoline tanker. On the day Jake Bannerman will drive north in search for weapons and ammunition. His brother owned a store in (Sherman) and kept his stock of guns in the basement. Jake sets out for (Sherman) in his truck. Two hours later he radios a message from (Sherman). He has found rifles and ammunition but his truck has broken down near the gas station just outside of the town and he has gone back into town on foot. He has also found a survivor's teenage girl' and he requests that you come to pick them up as soon as possible. Uncle Jonas agrees tells him to sit tight and wait for you to arrive. You slide behind the wheel of your roadster and with a farewell you power the car out of McKinney and speed northwards to (Sherman).
 1,1,2,0,Turn to North.
-2,0,2,0,a building to shoot from. You have no choice but to draw your gun an fire back. What gun do you use ?. PISTOL OR RIFLE
+2,0,2,0,As you reach  (Sherman) you are ambushed by an armed gang forcing you to jump out of your car and take cover. One member of the gang is using a building to shoot from. You have no choice but to draw your gun an fire back. What gun do you use ?. PISTOL OR RIFLE
 2,1,300,0,Pistol You are shot in the (Hand) but manage to kill him after fireing a few shots. - [You Take 5 damage]  - North
 2,2,301,0,option 2 : Rifle Your bullet strikes him in the chest spinning him away from the window. Your single shot proved fatal. - [You take 0 damage]
 300,0,300,-5,To continue 'turn to North
