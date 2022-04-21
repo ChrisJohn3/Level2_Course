@@ -235,9 +235,10 @@ awr_accept=['9999']
 global choice_accept
 choice_accept=[]
 
+
 choice_convert=['Spin','North','East','South','West']
 
-file1 = open("highway_holocaust4 reduced.csv", 'r')
+file1 = open("HH_restructured.csv", 'r')
 # file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
 Lines = file1.readline()
 cols_to_import=Lines.count(',')+1
