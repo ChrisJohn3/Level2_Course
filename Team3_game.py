@@ -354,7 +354,13 @@ sel_page=1
 while sel_page != 9999 and health > 0:
     page_up(sel_page)
     sleep(1)
-    sel_page=usr_page_sel()
+    # Rechecking Health as the effect of the page load and attached health could take us below zero
+    if health <=0 :
+        sel_page=9999
+        sleep(3)
+        page_up(sel_page)
+    else :
+        sel_page=usr_page_sel()
     # sel_page=int(input("Next Choice / Page Number Please : "))
 
 # Run Completion
@@ -363,9 +369,6 @@ while sel_page != 9999 and health > 0:
 # Just say goodbye to our customers and then leaving the    #
 # terminal clear to show we are out of the way :)           #
 clear()
-
-
-
 
 print(r" o-o    O  o   o o--o      o-o  o   o o--o o--o  ")
 sleep( 0.15)
