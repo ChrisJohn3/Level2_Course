@@ -165,13 +165,16 @@ def page_up(pag_no):
             # print(list_to_fill4[i].strip('"'))
             print()
             
-    print(awr_accept)
-    print(choice_accept)
+    # print(awr_accept)
+    # print(choice_accept)
     choice_text="Available options are:"
     for i in range(len(choice_accept)):
+        if i !=0 :
+            choice_text=choice_text + " or "
         choice_text=choice_text + " "+choice_convert[i]
     print("Your health Value is now "+ str(health))
     print(choice_text)
+    print("Choose SPIN to just stay here, entering 9999 will end the game.")
     print()
 
 # When the user enters an option we will need to check if   #
@@ -188,9 +191,10 @@ def usr_page_sel ():
     while fred==None:
 
 
-        fred=input("Next Choice / Page Number Please : ")
-
-        # print()
+        fred=input("Next Choice / Page Number Please : ").upper()
+        # fred=fred.upper
+        # print(fred)
+        # sleep(4)
         # print(choice_convert.index(fred)+1)
         # print(awr_accept)
         # print()
@@ -244,7 +248,7 @@ global choice_accept
 choice_accept=[]
 
 
-choice_convert=['Spin','North','East','South','West']
+choice_convert=['SPIN','NORTH','EAST','SOUTH','WEST']
 
 file1 = open("HH_restructured.csv", 'r')
 # file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
