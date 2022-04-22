@@ -165,8 +165,8 @@ def page_up(pag_no):
             # print(list_to_fill4[i].strip('"'))
             print()
             
-    # print(awr_accept)
-    # print(choice_accept)
+    print(awr_accept)
+    print(choice_accept)
     choice_text="Available options are:"
     for i in range(len(choice_accept)):
         choice_text=choice_text + " "+choice_convert[i]
@@ -186,13 +186,21 @@ def usr_page_sel ():
     global awr_accept
     fred=None
     while fred==None:
+
+
         fred=input("Next Choice / Page Number Please : ")
-        if choice_convert.count(str(fred))>0:
+
+        # print()
+        # print(choice_convert.index(fred)+1)
+        # print(awr_accept)
+        # print()
+
+        if choice_convert.count(str(fred))>0 and choice_convert.index(fred)+2<= len(awr_accept) and fred !='9999':
             # print(awr_accept[choice_convert.index(fred)+1])
             # sleep(1)
             return int(awr_accept[choice_convert.index(fred)+1])
             # break
-        elif int(fred)==9999:
+        elif fred=='9999':
             return int(fred)
 
         else :
@@ -455,33 +463,3 @@ clear()
 
 
 
-    #         ...
-    #       ;::::;
-    #      ;::::; :;
-    #      ;:::::'   :;                )
-    #     ;:::::;     ;.               (
-    #     ,:::::'       ;  _ ___________ ) 
-    #     ::::::;       ; [_[___________# 
-    #     ;:::::;       ;         OOOOOOOO
-    #     ,;::::::;     ;'         / OOOOOOO
-    #     ;:::::::::`. ,,,;.        /  / DOOOOOO
-    # .';:::::::::::::::::;,     /  /     DOOOO
-    # ,::::::;::::::;;;;::::;,   /  /        DOOO
-    # ;`::::::`'::::::;;;::::: ,#/  /          DOOO
-    # :`:::::::`;::::::;;::: ;::#  /            DOOO
-    # ::`:::::::`;:::::::: ;::::# /              DOO
-    # `:`:::::::`;:::::: ;::::::#/               DOO
-    # :::`:::::::`;; ;:::::::::##                OO
-    # ::::`:::::::`;::::::::;:::#                OO
-    # `:::::`::::::::::::;'`:;::#                O
-    # `:::::`::::::::;' /  / `:#
-    # ::::::`:::::;'  /  /   `#
-
-    #         88                               88           
-    #         88                         ,d    88           
-    #         88                         88    88           
-    # ,adPPYb,88  ,adPPYba, ,adPPYYba, MM88MMM 88,dPPYba,   
-    # a8"    `Y88 a8P_____88 ""     `Y8   88    88P'    "8a  
-    # 8b       88 8PP""""""" ,adPPPPP88   88    88       88  
-    # "8a,   ,d88 "8b,   ,aa 88,    ,88   88,   88       88  
-    # `"8bbdP"Y8  `"Ybbd8"' `"8bbdP"Y8   "Y888 88       88 
