@@ -2,6 +2,9 @@
 # Team 3 Game for the Code Nation Develop - Coding course, starting on Monday 11th April #
 # -------------------------------------------------------------------------------------- #
 #                                                                                        #
+#  2020-04-26 Tidying up some code and wish list being included in comments at the       #
+#              bottom of listing.                                                        #
+#                                                                                        #
 #  2020-04-20 Code and data file updated to carry Health value and its effects.          #
 #               Health value also displayed on every screen and effect shown.            #
 #               Initial health value randomised between 75% and 100%                     #
@@ -16,7 +19,7 @@
 #               identified                                                               #
 #                                                                         Chris Johnson  #
 #                                                                                        #
-# 2020-04-15 Due to requirements clarification data import and in game data selection    #
+#  2020-04-15 Due to requirements clarification data import and in game data selection   #
 #               rewritten so as not to rely on the installation of specific packages.    #
 #            Data csv structure updated to hold the next Goto_page as well, enabling     #
 #               verification of the users choice                                         #
@@ -279,50 +282,14 @@ print("""
                                                     _______________________________
 """)
 input()
-# print(r" ________         ____           __       ")
-# sleep( 0.15)
-# print(r"/_  __/ /  ___   / __/_ _  ___  / /___ __ ")
-# sleep( 0.15)
-# print(r" / / / _ \/ -_) / _//  ' \/ _ \/ __/ // / ")
-# sleep( 0.15)
-# print(r"/_/ /_//_/\__/ /___/_/_/_/ .__/\__/\_, /  ")
-# sleep( 0.15)
-# print(r"                        /_/       /___/   ")
-# sleep( 0.15)
 
-# print(r"   ___                      __          ")
-# sleep( 0.15)
-# print(r"  / _ )__ _____  ___ ____ _/ /__ _    __")
-# sleep( 0.15)
-# print(r" / _  / // / _ \/ _ `/ _ `/ / _ \ |/|/ /")
-# sleep( 0.15)
-# print(r"/____/\_,_/_//_/\_, /\_,_/_/\___/__,__/ ")
-# sleep( 0.15)
-# print(r"               /___/                    ")
-# sleep(2)
 
 for i in file1:
-# Each line will be interpreted for the four pieces of data # 
-# it holds, the first three pieces are ended by a comma     #
+# Each line will be interpreted for the five pieces of data # 
+# it holds, the first four pieces are ended by a comma     #
 # - however the last piece can have commas within it.       #
 # They will be put in the holding lists in matching index   #
 # positions                                                 #
-# Although there are a lot of find statements in here all   #
-# they are trying to do is find the start and end position  #
-# of each piece of data.  To manually see it through go     #
-# along a line until the brackets stop opening and start    #
-# closing,  figure out what value the function with those   #
-# brackets gives and then put that into the next set out    #
-
-
-    # list_to_fill.insert(j,int(i[0:i.find(",")]))
-    # list_to_fill2.insert(j,i[i.find(",")+1:i.find(",",i.find(",")+1)])
-    # list_to_fill3.insert(j,i[i.find(",",i.find(",")+1)+1:i.find(",",i.find(",",i.find(",")+1)+1)])
-    # list_to_fill4.insert(j,i[i.find(",",i.find(",",i.find(",")+1)+1)+1:len(i)])
-
-# Code becoming extreamely messy so developed function      # 
-# find_nth() to find the nth time a string appeared         #
-# within another                                            #
 
     list_to_fill.insert(j,int(i[0:find_nth(i,',',1)]))
     list_to_fill2.insert(j,i[find_nth(i,',',1)+1:find_nth(i,',',2)])
@@ -334,7 +301,6 @@ for i in file1:
     
 file1.close()
 
-# sleep(3)
 clear()
 
 # Lets set the first page as the selected page, that way we #
@@ -371,15 +337,19 @@ while sel_page != 9999 and health > 0:
 clear()
 
 print(r" o-o    O  o   o o--o      o-o  o   o o--o o--o  ")
-sleep( 0.15)
+sleep(0.25)
 print(r"o      / \ |\ /| |        o   o |   | |    |   | ")
-sleep( 0.15)
+sleep(0.25)
 print(r"|  -o o---o| O | O-o      |   | o   o O-o  O-Oo  ")
-sleep( 0.15)
+sleep(0.25)
 print(r"o   | |   ||   | |        o   o  \ /  |    |  \  ")
-sleep( 0.15)
+sleep(0.25)
 print(r" o-o  o   oo   o o--o      o-o    o   o--o o   o ")
 
+
+
+print()
+print()
 sleep( 0.15)
 
 print(r'           ...')
@@ -469,4 +439,10 @@ clear()
 
 
 
+# Wish List 
+# -----------
 
+# Take out direction reliance and extend data file to include text for options
+# Make available option list auto fill with text options from file for validation
+# 
+# Create a frame in which the pages are displayed 
