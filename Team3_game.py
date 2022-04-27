@@ -2,6 +2,12 @@
 # Team 3 Game for the Code Nation Develop - Coding course, starting on Monday 11th April #
 # -------------------------------------------------------------------------------------- #
 #                                                                                        #
+#  2020-04-27 Take out direction reliance and extend data file to include text           #
+#              for options                                                               #
+#             Make available option list auto fill with text options from file           #
+#              for validation                                                            #
+#                                                                         Chris Johnson  #
+#                                                                                        #
 #  2020-04-26 Tidying up some code and wish list being included in comments at the       #
 #              bottom of listing.                                                        #
 #                                                                                        #
@@ -84,12 +90,12 @@ def text_wrapper (text_to_wrap,desired_max_length):
         if line_len<=0:
             line_len=desired_max_length
             # printout the chunk we have identified 
-            print(text_to_wrap[start_pos:start_pos+line_len])
+            print(text_to_wrap[start_pos:start_pos+line_len].ljust(desired_max_length))
             # Move the start position to the end of the     #
             # string we just sent back                      #
             start_pos+=line_len
         else :
-            print(text_to_wrap[start_pos:start_pos+line_len])
+            print(text_to_wrap[start_pos:start_pos+line_len].ljust(desired_max_length))
             # Move the start position to the end of the     #
             # string we just sent back                      #
             start_pos+=line_len
@@ -98,6 +104,7 @@ def text_wrapper (text_to_wrap,desired_max_length):
     # Testing Lines used to see the progression through the function
         # print(str(tt_len) +"   -    " + str(start_pos) +  "   -   " + str(line_len) +"   -   " )
         # sleep(0.5)
+
 
 
 # The following clear() function clears the terminal screen #
@@ -155,13 +162,13 @@ def page_up(pag_no):
     global choice_text
     choice_accept=[]
     awr_accept=['9999']
-    print("Your health Value coming in to this room was " + str(health))
+    # print("Your health Value coming in to this room was " + str(health))
     
     for i in range(len(list_to_fill)):
         if list_to_fill[i]==pag_no:
             awr_accept.append(list_to_fill3[i])
-            choice_accept.append(list_to_fill2[i])
-            text_wrapper(list_to_fill5[i].strip('"').strip(),120)
+            choice_accept.append(list_to_fill5[i])
+            text_wrapper(list_to_fill6[i].strip('"').strip(),80)
             # print("Your health Value coming in to this room was " + str(health))
             health = (health) + int(list_to_fill4[i])
             # print("Your health Value is now "+ str(health))
@@ -174,10 +181,10 @@ def page_up(pag_no):
     for i in range(len(choice_accept)):
         if i !=0 :
             choice_text=choice_text + " or "
-        choice_text=choice_text + " "+choice_convert[i]
+        choice_text=choice_text +choice_accept[i]
     print("Your health Value is now "+ str(health))
     print(choice_text)
-    print("Choose SPIN to just stay here, entering 9999 will end the game.")
+    print("Choose STAY to just stay here, entering 9999 will end the game.")
     print()
 
 # When the user enters an option we will need to check if   #
@@ -193,19 +200,20 @@ def usr_page_sel ():
     fred=None
     while fred==None:
 
-
+        # print(choice_accept)
+        # print()
         fred=input("Next Choice / Page Number Please : ").upper()
         # fred=fred.upper
         # print(fred)
         # sleep(4)
         # print(choice_convert.index(fred)+1)
-        # print(awr_accept)
+        # print(choice_accept)
         # print()
 
-        if choice_convert.count(str(fred))>0 and choice_convert.index(fred)+2<= len(awr_accept) and fred !='9999':
+        if choice_accept.count(str(fred))>0 and choice_accept.index(fred)+2<= len(awr_accept) and fred !='9999':
             # print(awr_accept[choice_convert.index(fred)+1])
             # sleep(1)
-            return int(awr_accept[choice_convert.index(fred)+1])
+            return int(awr_accept[choice_accept.index(fred)+1])
             # break
         elif fred=='9999':
             return int(fred)
@@ -231,9 +239,6 @@ def find_nth(start_str,str_to_find,nth):
 # Run initalisation 
 # -----------------
 
-# Next we need to get our game data and hold it in the      #
-# memory so we can interrogate it for the game.             #
-
 # Create the initalised health value in a variable , value to be between 75 and 100
 import random
 global health
@@ -245,19 +250,11 @@ list_to_fill2=[]
 list_to_fill3=[]
 list_to_fill4=[]
 list_to_fill5=[]
+list_to_fill6=[]
 global awr_accept 
 awr_accept=['9999']
 global choice_accept
 choice_accept=[]
-
-
-choice_convert=['SPIN','NORTH','EAST','SOUTH','WEST']
-
-file1 = open("HH_restructured.csv", 'r')
-# file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
-Lines = file1.readline()
-cols_to_import=Lines.count(',')+1
-j=1
 
 
 print("""
@@ -282,7 +279,17 @@ print("""
                                                     _______________________________
 """)
 input()
+choice_convert=['SPIN','NORTH','EAST','SOUTH','WEST']
 
+
+# Next we need to get our game data and hold it in the      #
+# memory so we can interrogate it for the game.             #
+
+file1 = open("HH_restructured2.csv", 'r')
+# file1 = open("E:/aaaa Level 2 Certificate Python etc/Backup_game.csv", 'r')
+Lines = file1.readline()
+cols_to_import=Lines.count(',')+1
+j=1
 
 for i in file1:
 # Each line will be interpreted for the five pieces of data # 
@@ -295,7 +302,8 @@ for i in file1:
     list_to_fill2.insert(j,i[find_nth(i,',',1)+1:find_nth(i,',',2)])
     list_to_fill3.insert(j,i[find_nth(i,',',2)+1:find_nth(i,',',3)])
     list_to_fill4.insert(j,i[find_nth(i,',',3)+1:find_nth(i,',',4)])
-    list_to_fill5.insert(j,i[find_nth(i,',',4)+1:len(i)])
+    list_to_fill5.insert(j,i[find_nth(i,',',4)+1:find_nth(i,',',5)])
+    list_to_fill6.insert(j,i[find_nth(i,',',5)+1:len(i)])
 
     j+=1
     
@@ -375,8 +383,5 @@ clear()
 
 # Wish List 
 # -----------
-
-# Take out direction reliance and extend data file to include text for options
-# Make available option list auto fill with text options from file for validation
 # 
 # Create a frame in which the pages are displayed 
