@@ -1,0 +1,107 @@
+Page_no,Choice_No,Goto_page,Health Effect,Option,Text
+1,0,1,0,STAY,"After a week of careful preparation the colony is ready to begin the long trek to Big Spring. 3 vehicles make up the convoy: A school bus. A roadster and a gasoline tanker. On the day Jake Bannerman will drive north in search for weapons and ammunition. His brother owned a store in (Sherman) and kept his stock of guns in the basement. Jake sets out for (Sherman) in his truck. Two hours later he radios a message from (Sherman). He has found rifles and ammunition but his truck has broken down near the gas station just outside of the town and he has gone back into town on foot. He has also found a survivor, a teenage girl, and he requests that you come to pick them up as soon as possible. Uncle Jonas agrees tells him to sit tight and wait for you to arrive. You slide behind the wheel of your roadster and with a farewell you power the car out of McKinney and speed northwards to (Sherman)."
+1,1,2,0,NORTH,Turn to North.
+2,0,2,0,STAY,As you reach  (Sherman) you are ambushed by an armed gang forcing you to jump out of your car and take cover. One member of the gang is using a building to shoot from. You have no choice but to draw your gun an fire back. What gun do you use ?. PISTOL OR RIFLE.
+2,1,300,0,PISTOL,Pistol. (Type North)
+2,2,301,0,RIFLE,Rifle. (Type East)
+300,0,300,-5,STAY,You are shot in the (Hand) but manage to kill him after fireing a few shots.
+300,1,4,0,NORTH,To continue 'turn to North.
+301,0,301,0,STAY,: Rifle Your bullet strikes him in the chest spinning him away from the window. Your single shot proved fatal.
+301,1,4,0,NORTH,To continue 'turn to North.
+4,0,4,0,STAY,You are forced to break cover as gunfire erupts from all sides. You zigzag towards the door but your manoeuvre is anticipated and a stream of bullets tears up the ground at your feet. Do you continue zig zigging or do you run straight for the door.
+4,1,501,0,ZIG,(North) zig zag : 
+4,2,500,0,RUN,(East) direct run : 
+500,0,500,-10,STAY,While you are a few feet of the doorway you feel a sharp burning sensation on your right shoulder.
+500,1,6,0,NORTH,TO CONTINUE GO NORTH.
+501,0,500,0,STAY,You change your pattern confusing the shooters and make it into the door way.
+501,1,6,0,NORTH,TO CONTINUE GO NORTH.
+6,0,6,0,STAY,You make it to the door but forwards and fall through the doorway. As you look up from the dusty floor you see yet another armed gang member . You draw your gun but the machine gunner disappears from view reappearing a moment later with his gun held at waist level ready to fire. What gun have you drawn ?.
+6,1,700,0,SHOTGUN,(North) Shotgun 
+6,2,701,0,PISTOL,(East) : Pistol 
+700,0,700,-5,STAY,you draw your shotgun which is a perfect weapon to use in a small confined area and squeeze on the trigger you kill him but are hit in the hand. You cradle your weapon in your left hand and with your right as you work a magazine into the bottom. A moving shadow of an enemy half fills the doorway you are facing. What do you do ?.
+700,1,800,0,PISTOL,(North) you draw your pistol 
+700,2,801,0,SHOTGUN,(East) Take a chance and raise your shotgun 
+701,0,701,-15,STAY,You cradle your weapon in your left hand and with your right as you work a magazine into the bottom. A moving shadow of an enemy half fills the doorway you are facing. What do you do ?.
+701,1,800,0,RELOAD,(North) Reload and shoot 
+701,2,801,0,SHOTGUN,(East) Take a chance and raise your shotgun 
+800,0,800,-15,STAY,: You fire your pistol but were too slow - your bullet strikes him but you are hit in the chest. \n  Reload and shoot : This did not work out and you are hit in the hand and leg but manage to escape death but got off 2 rounds. He disappears from sight and you hear him crash down upon the broken glass that carpets the floor of the drugstore.
+800,1,9,0,NORTH,TO CONTINUE GO NORTH.
+801,0,801,0,STAY,With the one bullet left that is chambered you drop your target without taking damage good move. He disappears from sight and you hear him crash down upon the broken glass that carpets the floor of the drugstore.
+801,1,9,0,NORTH,TO CONTINUE GO NORTH.
+9,0,9,0,STAY,As you pull his body over you notice he held a Flick Knife that drops from his lifeless body. As you pick this up Another burst of fire echoes from across the street and once more with your pulse racing you jump to your feet and sprint down towards two doors . What what gun are you holding and what door do you take.
+9,2,1000,0,SHOTGUN,(West) Left door way with shotgun : 
+9,1,1001,0,PISTOL,(East) right doorway with pistol: 
+1000,0,1000,-15,STAY,Oh no A machine gunner is levelling his weapon right at you. When you squeeze off your shotgun. You kill him but you are hit in the chest. Right as you kill him you see a shadow fill up the window from outside. A gang member is at the window about to aim his gun what do you do.
+1000,1,1100,0,WINDOW,(North) You run at the window 
+1000,2,1101,0,ROOM,(East) You run into the next room 
+1001,0,1001,0,STAY,You go trough the door aiming your pistol when you see a guy aiming his gun your small weapon makes it easier to aim killing him as you squeeze the trigger. Right as you kill him you see a shadow fill up the window from outside. A gang member is at the window about to aim his gun what do you do?
+1001,1,1100,0,WINDOW,(North) You run at the window 
+1001,2,1101,0,ROOM,(East) You run into the next room 
+1100,0,1100,-10,STAY,diving through and in mid air landing 1 bullet through the window frame that penetrates through killing your target as you follow through the window now placing you back in the street But the glass has cut your shoulder. You run for your car and vault over the trunk landing feet-first in the driving seat your hand poised to switch on the ignition. The engine growls but before you can shift gears and speed away a leather-clad punk come running towards you from out of the ruins the renegade leaps into the car beside you cackling like a maniac as he lunges for your throat with his flick knife do you reach for you flick knife or do you grab his knife from him.
+1100,1,1102,0,HIS,Fight back trying to take his knife.
+1100,2,12,0,YOURS,Reach for your knife
+1101,0,1101,0,STAY,You run into the next room and out of the front door taking him by surprise and kill him with 2 body shots. You run for your car and vault over the trunk landing feet-first in the driving seat your hand poised to switch on the ignition. The engine growls but before you can shift gears and speed away a leather-clad punk come running towards you from out of the ruins the renegade leaps into the car beside you cackling like a maniac as he lunges for your throat with his flick knife do you reach for you flick knife or do you grab his knife from him.
+1101,1,1102,0,HIS,Fight back trying to take his knife.
+1101,2,12,0,YOURS,Reach for your knife
+1102,0,1102,0,STAY,You start to fight back trying to take his knife but take damage from his knife and die slumped in your car seat.
+1102,1,9999,0,END,
+12,0,12,-5,STAY,You start to fight while reaching for the flick knife you earlier picked up and with a move from Steven segal film stab him 3 times in a quick military manor. You do take a cut to your arm. \n A fury of bullets start to hit your car forcing you to exit and jump to the floor as you raise your shotgun and fire towards another aproching gang member. This roars and spits out a deadly cloud of buckshot catching him square in the chest. Briefly you see him thrown backwards through the air before his lifeless body crashes down to the dusty floor. You eject the spent shell to reload but keep your gun trained in case he was not alone.
+12,1,13,0,NORTH,TO CONTINUE GO NORTH.
+13,0,13,0,STAY,With your pulse racing you jump to your feet and sprint - heading down towards the darkened ally way were you see 2 gang members. Do you take them on =(North) or do you turn and run back to your car.
+13,1,1400,0,TAKEON,Take them on 
+13,2,1401,0,CAR,Back to car
+1400,0,1400,-10,STAY,You take them on and draw your weapon firing in there direction but miss you are hit 2 times in your hand before running back to your car.  You make it back to your car and Grabbing the rollbar that protects the driving compartment you pull yourself feet-first into the driving seat and reach out for the ignition. The engine growls responsively but its powerful roar is all but drowned by a sudden eruption of gunfire from the 2 gang members you just ran into. Bullets shatter the windshield forcing you to throw yourself across the passenger seat to avoid being caught in a deadly crossfire do you fire back (North) or stay taking cover (East).
+1400,1,15,0,FIRE, fire back (North)
+1400,2,1402,0,COVER,Take cover 
+1401,0,1401,-5,STAY,You turn and run back to your car. as you run away 1 bullet strikes your hand. You make it back to your car and Grabbing the rollbar that protects the driving compartment you pull yourself feet-first into the driving seat and reach out for the ignition. The engine growls responsively but its powerful roar is all but drowned by a sudden eruption of gunfire from the 2 gang members you just ran into. Bullets shatter the windshield forcing you to throw yourself across the passenger seat to avoid being caught in a deadly crossfire do you fire back (North) or stay taking cover (East).
+1401,1,15,0,FIRE, fire back (North)
+1401,2,1402,0,COVER,Take cover 
+1402,0,1402,0,STAY,Game over you should of shot back bullets hit you in the head and your life was lost.
+1402,1,9999,0,END,
+15,0,15,0,STAY,Drawing your pistol taking aim at the 2 approaching members you start to fire back killing them both. TO CONTINUE GO NORTH
+15,1,16,0,NORTH,
+16,0,16,0,STAY,You then shift your car into gear as Jake and the teenage girl dive into the back seats while you are pulling away. You drive off down the tracks ileaving town made by Long Jake's tyres to head to his truck to collect the weapons he found from his brothers store. You trail them all the way to the old gas station. As you pull up to his truck and jump out of the car you are fired upon by yet another masked gunmen who had found the truck. he fires his gun. Do you leave the guns and run back to your car? = (East). or do you dive for cover ready to fight? = (North).
+16,1,17,0,DIVE,If you wish to dive to the ground and take cover 'turn to the = (North).
+16,2,1601,0,LEAVE,leave the guns (east)
+1601,0,1601,0,STAY,If you choose to leave you are shot doing so GAME OVER.
+1601,1,9999,0,END,
+17,0,17,0,STAY,"You glance from cover just long enough to pinpoint the muzzle flash coming from the other side of jakes truck. You then duck back and wait for a break in the firing. There is a sudden silence. You chance a second glance and spot a shadowy figure withdrawing an empty magazine do you draw your pistol = (North) or do you use your rifle = (East). 237,1,1,0, option"
+17,1,1800,0,PISTOL,Pistol
+17,2,1801,0,RIFLE,Rifle
+1800,0,1800,0,STAY,You point your pistol at him and start to fire killing him with 3 well placed shots he didn't have time to reload to fire back. all goes quite. An eerie silence is broken by Long Jake who shouts out it aint over yet. There's more of them damn ruines' As if to prove his point two single shots ring out almost simultaneously and ricochet off the storehouse wall. 'Watch your sides' Jake yells. 'Don't let 'em circle you.' You sense someone or something moving among the ruined shops away to your right. They are trying to get into a position where they will have a clear shot at you. If you are to survive this ambush you had better find somewhere less exposed.  \n If you wish to make a dash for the store'turn to North If you decide to jump into your roadster and take off along the main street'turn to East.
+1800,1,1802,0,DASH,Dash for the shop
+1800,2,1803,0,CAR,Head for the roadster
+1801,0,1801,-15,STAY, You tried to aim your long rifle by this time he had reloaded and lets off 2 rounds 1 hits in your chest you and you land 1 shot killing him. all goes quite. An eerie silence is broken by Long Jake who shouts out it aint over yet. There's more of them damn ruines' As if to prove his point two single shots ring out almost simultaneously and ricochet off the storehouse wall. 'Watch your sides' Jake yells. 'Don't let 'em circle you.' You sense someone or something moving among the ruined shops away to your right. They are trying to get into a position where they will have a clear shot at you. If you are to survive this ambush you had better find somewhere less exposed. If you wish to make a dash for the store'turn to North If you decide to jump into your roadster and take off along the main street'turn to East.
+1801,1,1802,0,DASH,Dash for the shop
+1801,2,1803,0,CAR,Head for the roadster
+1802,0,1802,0,STAY,You dash for the shop shooting you gun while you run but Your enemy's reactions are lightning fast. He throws himself down behind the a rock and your gunfire strikes it. You make it inside but An instant later the unexpected sound of running feet makes you spin on your heel. The punk is charging at you from the ruins with a knife held in his hand. You raise your weapon but before you can squeeze the trigger he dives full length and catches you in the chest with the crown of his head. His attack slams you backwards to the ground and gasping for breath. Do you reach for your knife in your pocket = (North) or the rock lay by your head (East).
+1802,1,1805,0,KNIFE,Knife
+1802,2,1806,0,ROCK,Rock
+1803,0,1803,0,STAY,You try to make it to your car to escape but are shot in the shoulder and forced to run for the shop You make it inside but An instant later the unexpected sound of running feet makes you spin on your heel. The punk is charging at you from the ruins with a knife held in his hand. You raise your weapon but before you can squeeze the trigger he dives full length and catches you in the chest with the crown of his head. His attack slams you backwards to the ground and gasping for breath. Do you reach for your knife in your pocket = (North) or the rock lay by your head (East).
+1803,1,1805,0,KNIFE,Knife
+1803,2,1806,0,ROCK,Rock
+1805,0,1805,-5,STAY,(north) you pull out your knife and slash him as he tyres to kill you you win the knife fight but a wounded on your hand.
+1805,1,19,0,NORTH,
+1806,0,1806,-10,STAY,(East) you grab hold of a rock lay next to you and smash it over his head knocking him out.
+1806,1,19,0,NORTH,
+19,0,19,0,STAY,You run out the store heading back to your car but are once again shot at. You throw yourself down your hand reaching for a weapon and take cover behind the engine compartment. With the blood on your face from the last punk reducing your vision you force yourself to listen for a sound that will betray the whereabouts of your hidden attacker. 'He's in the drugstore!' shouts Long Jake his voice drawing another burst of fire from a building directly opposite means you have to run. You are about to run into the store that Jake and the teenage woman have taken cover in wile shooting for some sort of cover what weapon did you reach for. machine gun = (North) rifle = (East).
+19,1,2000,0,MACHINE,Machine Gun
+19,2,2001,0,RIFLE,Rifle
+2000,0,2000,0,STAY,You run to the store firing your machine gun lacing the building full of bullets meaning he was unable to shoot back and make it inside.  The instant you set foot in the store two hands reach out of the darkness grab you by the jacket its jake. Immediately there is a long burst of fire and a hail of bullets scythes the air where you were standing only moments before. 'These ain't no ordinary punks' growls Long Jake peering cautiously over the edge of the bullet-shattered window frame. They're a mite anxious to get their hands on her too' he says nodding towards the girl who is crouching behind the store counter her eyes wide with fright. 'What do they want with her?' you ask but before Long Jake can reply there is a flash and a deafening explosion. The store's rear door is blown inwards and flying debris knocks you off your feet. Stunned by the blast you rise unsteadily and reach for a weapon. A grey shape fills the rear entrance its outline fuzzy in the smoke and dust that hover there. Then the shape draws into focus and you see the silhouette of a tall man. 'Look out!' screams Long Jake as the figure leaps through the doorway a shotgun in hand ready to fire. IT IS THE MAIN GANG LEADER. This is it the last time you will ever make a decision how do you proceed. option 1 (north) You pick up your pistol / option 2 (South) You try to use your knife / option 3 (East) Run / option 4 You hold up your hands and scream wait (West).
+2000,1,2005,0,PISTOL,pistol
+2000,2,2006,0,KNIFE,knife
+2000,3,2007,0,RUN,run
+2000,4,21,0,BEG,Surrender and beg 
+2001,0,2001,-10,STAY,You run to the store firing your rifle but run out of bullets and take 1 shot to the arm before you make it inside.  The instant you set foot in the store two hands reach out of the darkness grab you by the jacket its jake. Immediately there is a long burst of fire and a hail of bullets scythes the air where you were standing only moments before. 'These ain't no ordinary punks' growls Long Jake peering cautiously over the edge of the bullet-shattered window frame. They're a mite anxious to get their hands on her too' he says nodding towards the girl who is crouching behind the store counter her eyes wide with fright. 'What do they want with her?' you ask but before Long Jake can reply there is a flash and a deafening explosion. The store's rear door is blown inwards and flying debris knocks you off your feet. Stunned by the blast you rise unsteadily and reach for a weapon. A grey shape fills the rear entrance its outline fuzzy in the smoke and dust that hover there. Then the shape draws into focus and you see the silhouette of a tall man. 'Look out!' screams Long Jake as the figure leaps through the doorway a shotgun in hand ready to fire. IT IS THE MAIN GANG LEADER. \n \n This is it the last time you will ever make a decision how do you proceed. option 1 (north) You pick up your pistol / option 2 (South) You try to use your knife / option 3 (East) Run / option 4 You hold up your hands and scream wait (West).
+2001,1,2005,0,PISTOL,pistol
+2001,2,2006,0,KNIFE,knife
+2001,3,2007,0,RUN,run
+2001,4,21,0,BEG,Surrender and beg 
+2005,0,2005,0,STAY,You pick up your pistol but are shot and killed. GAME OVER.
+2005,1,9999,0,END,
+2006,0,2006,0,STAY,You try to use your knife but you are shot. GAME OVER.
+2006,1,9999,0,END,
+2007,0,2007,0,STAY,You try to run and hide in the freezer buy are shot in the back and fall down dead.
+2007,1,9999,0,END,
+21,0,21,500,STAY,You hold up your hands and scream wait . at this time the girl stranger pulls out a gun from underneath the shops counter and with 1 shot kills the guy. \n \n \n Congratulations you have lived to see another day the girl was the only one who could save you from death . Without taking your eyes off your target as he fell to the floor you are left unsure about what just happened you surly should of died. You head back to Big Spring to rejoin the collony with 1 extra member the girl who saved your life.
+21,1,9999,0,END,Head North to finish the game.....................................
